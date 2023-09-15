@@ -13,8 +13,6 @@ ENV PYTHONUNBUFFERED=1
 # Install pip requirements
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
-# only needs in docker for web server gateway
-RUN python -m pip install gunicorn
 
 WORKDIR /app
 COPY . /app
